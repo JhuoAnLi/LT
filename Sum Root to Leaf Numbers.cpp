@@ -16,9 +16,9 @@ public:
     }
     int god (TreeNode * root,int i)
     {
-        if(root == nullptr) return 0;
-        int temp = i*10 + root -> val;
-        if(root ->right == nullptr && root ->left == nullptr) return temp;
-        return god(root ->right , temp) + god (root -> left, temp);
+        if(root == nullptr) return 0; // check if original root is nullptr
+        int temp = i*10 + root -> val; 
+        if(root ->right == nullptr && root ->left == nullptr) return temp; // make sure it's leave
+        return god(root ->right , temp) + god (root -> left, temp); //left and right nodes
     }
 };
