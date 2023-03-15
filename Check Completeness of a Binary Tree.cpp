@@ -20,7 +20,7 @@ public:
         {
             TreeNode* temp = q.front();
             if(temp && flag) return false;
-            if(!temp) flag =1;
+            if(!temp) flag =1; // give the null node a flag = 1, then if after this node still have nonnull nodes, it would return false
             else
             {
                 q.push(temp -> left);
